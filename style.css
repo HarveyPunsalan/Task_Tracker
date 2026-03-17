@@ -1,0 +1,13 @@
+:root {
+    --primary: #2349aa;
+    --danger: #ff0000;
+    --success: rgba(23, 213, 45, 0.84);
+    --bg: #ffffff;
+    --radius: 8px;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
