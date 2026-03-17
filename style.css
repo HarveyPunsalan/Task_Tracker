@@ -1,8 +1,8 @@
 :root {
     --primary: #2349aa;
-    --danger: #ff0000;
-    --success: rgba(23, 213, 45, 0.84);
-    --bg: #ffffff;
+    --danger: #dc2626;
+    --success: #16a34a;
+    --bg: #f8fafc;
     --radius: 8px;
 }
 
@@ -10,4 +10,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+header {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
 }
