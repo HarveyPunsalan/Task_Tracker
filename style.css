@@ -68,3 +68,74 @@ button[type="submit"] {
     color: #fff;
     padding: 16px;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px 12px;
+}
+
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+tr:hover {
+    background-color: #f0f0f0;
+}
+
+.priority-low {
+    color: #6b7280;
+}
+
+.priority-medium {
+    color: #f59e0b;
+}
+
+.priority-high {
+    color: var(--danger);
+}
+
+.task-done {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+progress {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e5e7eb;
+    border-radius: var(--radius);
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--success);
+    border-radius: var(--radius);
+}
+
+.btn-done,
+.btn-delete {
+    padding: 4px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn-done {
+    background-color: var(--success);
+}
+
+.btn-delete {
+    background-color: var(--danger);
+}
