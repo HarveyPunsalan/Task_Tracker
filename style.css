@@ -1,9 +1,10 @@
 :root {
-    --primary: #2349aa;
+    --primary: #2c3968;
     --danger: #dc2626;
     --success: #16a34a;
-    --bg: #f8fafc;
+    --bg: #efeeee;
     --radius: 8px;
+    --form-bg: #ffffff;
 }
 
 *, ::before, ::after {
@@ -37,4 +38,33 @@ aside {
 
 section {
     flex: 1;
+}
+
+#task-form {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+#task-input,
+#priority-select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+}
+
+button[type="submit"] {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+#task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#task-table th {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 16px;
 }
