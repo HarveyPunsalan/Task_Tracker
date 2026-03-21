@@ -15,12 +15,18 @@
 
 <main>
   <aside id="sidebar">
-    <!-- sidebar content will go here later -->
+    <!-- sidebar content -->
     <h2>Summary</h2>
     <figure>
       <progress id="progress-bar" max="100" value="0"></progress>
       <figcaption>Completion rate</figcaption>
     </figure>
+
+    <div class="stats">
+      <p>Total: <b id="count-total">0</b></p>
+      <p>Done: <b id="count-done">0</b></p>
+      <p>Remaining: <b id="count-remaining">0</b></p>
+    </div>
 
     <details>
       <summary>Tips</summary>
@@ -31,7 +37,7 @@
   </aside>
 
   <section id="task-area">
-    <!-- task content will go here later -->
+    <!-- task content  -->
     <form id="task-form">
 
       <input type="text" id="task-input" placeholder="Task name..." required>
