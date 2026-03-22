@@ -65,3 +65,54 @@ function updateStats() {
     const percentage = total === 0 ? 0 : (done / total) * 100;
     progressBar.value = percentage;
 }
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = textInput.value.trim();
+    if (name === "") return;
+
+    id++;
+
+    const newTask = {
+        id: id,
+        name: name,
+        priority: prioritySelect.value,
+        done: false
+    };
+
+    tasks.push(newTask);
+    renderTasks();
+    textInput.value = "";
+});
+
+tableBody.addEventListener("click", function(e) {
+
+    if (e.target.classList.contains("btn-done")) {
+        const clickedId = Number(e.target.getAttribute("data-id"));
+
+        for (let i = 0; i < tasks.length; i++) {
+            if (tasks[i].id === clickedId) {
+                tasks[i].done = !tasks[i].done;
+                break;
+            }
+        }
+
+        renderTasks();
+    }
+
+    if (e.target.classList.contains("btn-delete")) {
+        const clickedId = Number(e.target.getAttribute("data-id"));
+
+        for (let i = 0; i < tasks.length; i++) {
+            if (tasks[i].id === clickedId) {
+                tasks.splice(i, 1);
+                break;
+            }
+        }
+
+        renderTasks();
+    }
+});
+
+renderTasks();
